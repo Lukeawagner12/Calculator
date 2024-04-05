@@ -41,7 +41,7 @@ clear.addEventListener('click', function() {
 });
 
 posNev.addEventListener('click', function() {
-    currentNumber = currentNumber * -1;
+    currentNumber = result.textContent * -1;
     result.textContent = currentNumber;
 });
 
