@@ -12,10 +12,14 @@ let currentNumber = 0;
 
 oporators.forEach(function(oporator) {
     oporator.addEventListener('click', function() {
-        currentOporator = this.value;
         currentNumberArray = [];
         selectedNumbers.push(result.textContent);
         console.log(selectedNumbers);
+        if(selectedNumbers.length > 1){
+        calculation();
+        }
+        selectedNumbers.push(result.textContent);
+        currentOporator = this.value;
     });
 });
 
@@ -33,10 +37,12 @@ equals.addEventListener('click', function() {
     selectedNumbers.push(currentNumber);
     calculation();
     currentNumberArray = [];
+    selectedNumbers = [];
 });
 
 clear.addEventListener('click', function() {
     currentNumberArray = [];
+    selectedNumbers = [];
     result.textContent = "0";
 });
 
@@ -61,6 +67,26 @@ function calculation() {
     }
     if(currentOporator == "*") {
         let answer = Number(numbers[0]) * Number(numbers[1]);
+        result.textContent = answer;
+    }
+}
+
+function calculation2() {
+    let numbers = selectedNumbers.slice(-3);
+    if(currentOporator == "+") {
+        let answer = Number(numbers[1]) + Number(numbers[2]);
+        result.textContent = answer;
+    }
+    if(currentOporator == "-") {
+        let answer = Number(numbers[1]) - Number(numbers[2]);
+        result.textContent = answer;
+    }
+    if(currentOporator == "/") {
+        let answer = Number(numbers[1]) / Number(numbers[2]);
+        result.textContent = answer;
+    }
+    if(currentOporator == "*") {
+        let answer = Number(numbers[1]) * Number(numbers[2]);
         result.textContent = answer;
     }
 }
