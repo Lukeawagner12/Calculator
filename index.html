@@ -8,32 +8,38 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="calculator">
-            <!-- row 1 -->
-            <div class="display"><h2 class="result">0</h2></div>
-            <!-- row 2 -->
-            <button class="btn clear">AC</button>
-            <button class="btn pos-nev">-/+</button>
-            <button class="btn div oporator" value="/">/</button>
-            <!-- row 3 -->
-            <button class="btn num7 number-button" value="7">7</button>
-            <button class="btn num8 number-button" value="8">8</button>
-            <button class="btn num9 number-button" value="9">9</button>
-            <button class="btn mult oporator" value="*">*</button>
-            <!-- row 4 -->
-            <button class="btn num4 number-button" value="4">4</button>
-            <button class="btn num5 number-button" value="5">5</button>
-            <button class="btn num6 number-button" value="6">6</button>
-            <button class="btn sub oporator" value="-">-</button>
-            <!-- row 5 -->
-            <button class="btn num1 number-button" value="1">1</button>
-            <button class="btn num2 number-button" value="2">2</button>
-            <button class="btn num3 number-button" value="3">3</button>
-            <button class="btn add oporator" value="+">+</button>
-            <!-- row 6 -->
-            <button class="btn num0 number-button" value="0">0</button>
-            <button class="btn decimal number-button" value=".">.</button>
-            <button id="equals" class="btn">=</button>
+        <div class="calculator-wrapper">
+            <div class="calculator">
+                <!-- row 1 -->
+                <div class="display"><button class="btn history-btn">H</button><h2 class="result">0</h2></div>
+                <!-- row 2 -->
+                <button class="btn clear">AC</button>
+                <button class="btn backspace">C</button>
+                <button class="btn pos-nev">-/+</button>
+                <button class="btn div oporator" value="/">/</button>
+                <!-- row 3 -->
+                <button class="btn num7 number-button" value="7">7</button>
+                <button class="btn num8 number-button" value="8">8</button>
+                <button class="btn num9 number-button" value="9">9</button>
+                <button class="btn mult oporator" value="*">*</button>
+                <!-- row 4 -->
+                <button class="btn num4 number-button" value="4">4</button>
+                <button class="btn num5 number-button" value="5">5</button>
+                <button class="btn num6 number-button" value="6">6</button>
+                <button class="btn sub oporator" value="-">-</button>
+                <!-- row 5 -->
+                <button class="btn num1 number-button" value="1">1</button>
+                <button class="btn num2 number-button" value="2">2</button>
+                <button class="btn num3 number-button" value="3">3</button>
+                <button class="btn add oporator" value="+">+</button>
+                <!-- row 6 -->
+                <button class="btn num0 number-button" value="0">0</button>
+                <button class="btn decimal" value=".">.</button>
+                <button id="equals" class="btn">=</button>
+            </div>
+            <div class="history">
+                <h3>History</h3>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
